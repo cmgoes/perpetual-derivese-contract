@@ -1,11 +1,13 @@
-node_modules
-.env
-coverage
-coverage.json
-typechain
-typechain-types
-
-#Hardhat files
-cache
 artifacts
-
+cache
+node_modules
+coverage.json
+coverage
+typechain
+flattened
+slither
+/.DS_Store
+.idea
+contracts/hardhat-dependency-compiler/*
+.openzeppelin/unknown-31337.json
+.env*
