@@ -2,8 +2,7 @@ import { expect } from "chai"
 import { BigNumberish } from "ethers/lib/ethers"
 import { parseEther } from "ethers/lib/utils"
 import { ethers, waffle } from "hardhat"
-import { ClearingHouseConfig, CollateralManager, TestERC20, Vault } from "../../typechain"
-import { ChainlinkPriceFeedV2 } from "../../typechain/perp-oracle"
+import { ChainlinkPriceFeedV2, ClearingHouseConfig, CollateralManager, TestERC20, Vault } from "../../typechain"
 import { ClearingHouseFixture, createClearingHouseFixture } from "../clearingHouse/fixtures"
 
 describe("CollateralManager spec", () => {

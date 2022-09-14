@@ -4,6 +4,7 @@ import { parseEther, parseUnits } from "ethers/lib/utils"
 import { ethers, waffle } from "hardhat"
 import {
     BaseToken,
+    ChainlinkPriceFeedV2,
     CollateralManager,
     InsuranceFund,
     MarketRegistry,
@@ -14,7 +15,6 @@ import {
     TestVault,
     UniswapV3Pool,
 } from "../../typechain"
-import { ChainlinkPriceFeedV2 } from "../../typechain/perp-oracle"
 import { ClearingHouseFixture, createClearingHouseFixture } from "../clearingHouse/fixtures"
 import {
     addOrder,
