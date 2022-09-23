@@ -49,7 +49,8 @@
     "@openzeppelin/contracts-upgradeable": "3.4.2",
     "@perp/perp-oracle-contract": "0.4.3",
     "@uniswap/v3-core": "https://github.com/Uniswap/uniswap-v3-core/tarball/v1.0.0",
-    "@uniswap/v3-periphery": "1.0.1"
+    "@uniswap/v3-periphery": "1.0.1",
+    "dotenv": "^16.0.2"
   },
   "devDependencies": {
     "@eth-optimism/smock": "1.1.4",
@@ -77,6 +78,7 @@
     "hardhat": "2.3.0",
     "hardhat-contract-sizer": "2.5.1",
     "hardhat-dependency-compiler": "1.1.1",
+    "hardhat-deploy": "^0.11.15",
     "hardhat-gas-reporter": "1.0.4",
     "husky": "6.0.0",
     "json-stable-stringify": "1.0.1",

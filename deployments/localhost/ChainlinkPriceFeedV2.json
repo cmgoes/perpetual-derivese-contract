@@ -1,0 +1,342 @@
+{
+  "address": "0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "contract AggregatorV3Interface",
+          "name": "aggregator",
+          "type": "address"
+        },
+        {
+          "internalType": "uint80",
+          "name": "cacheTwapInterval",
+          "type": "uint80"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "price",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "timestamp",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint8",
+          "name": "indexAt",
+          "type": "uint8"
+        }
+      ],
+      "name": "PriceUpdated",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "interval",
+          "type": "uint256"
+        }
+      ],
+      "name": "cacheTwap",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "currentObservationIndex",
+      "outputs": [
+        {
+          "internalType": "uint8",
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "decimals",
+      "outputs": [
+        {
+          "internalType": "uint8",
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getAggregator",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "interval",
+          "type": "uint256"
+        }
+      ],
+      "name": "getPrice",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint80",
+          "name": "roundId",
+          "type": "uint80"
+        }
+      ],
+      "name": "getRoundData",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "observations",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "price",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "priceCumulative",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "timestamp",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "update",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0x6d7d146fa259ef9cc38f4871c27f786da04e6dcb9f083155097fc59b8bc201a6",
+  "receipt": {
+    "to": null,
+    "from": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+    "contractAddress": "0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9",
+    "transactionIndex": 0,
+    "gasUsed": "908510",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0x3fb98e75b168a07d27cc34c189f175a8bf77f5e6046d400b4dfcc91427643db1",
+    "transactionHash": "0x6d7d146fa259ef9cc38f4871c27f786da04e6dcb9f083155097fc59b8bc201a6",
+    "logs": [],
+    "blockNumber": 4,
+    "cumulativeGasUsed": "908510",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [
+    "0x779877A7B0D9E8603169DdbD7836e478b4624789",
+    900
+  ],
+  "numDeployments": 1,
+  "solcInputHash": "aa375816d667ea6d07048d058cd68303",
+  "metadata": "{\"compiler\":{\"version\":\"0.7.6+commit.7338295f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"contract AggregatorV3Interface\",\"name\":\"aggregator\",\"type\":\"address\"},{\"internalType\":\"uint80\",\"name\":\"cacheTwapInterval\",\"type\":\"uint80\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"price\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"timestamp\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint8\",\"name\":\"indexAt\",\"type\":\"uint8\"}],\"name\":\"PriceUpdated\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"interval\",\"type\":\"uint256\"}],\"name\":\"cacheTwap\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"currentObservationIndex\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"decimals\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getAggregator\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"interval\",\"type\":\"uint256\"}],\"name\":\"getPrice\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint80\",\"name\":\"roundId\",\"type\":\"uint80\"}],\"name\":\"getRoundData\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"observations\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"price\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"priceCumulative\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"timestamp\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"update\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"cacheTwap(uint256)\":{\"details\":\"Returns the cached index price of the token.\",\"params\":{\"interval\":\"The interval represents twap interval.\"}},\"getPrice(uint256)\":{\"details\":\"Returns the index price of the token.\",\"params\":{\"interval\":\"The interval represents twap interval.\"}},\"getRoundData(uint80)\":{\"params\":{\"roundId\":\"The roundId that fed into Chainlink aggregator.\"}},\"update()\":{\"details\":\"anyone can help update it.\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"@perp/perp-oracle-contract/contracts/ChainlinkPriceFeedV2.sol\":\"ChainlinkPriceFeedV2\"},\"evmVersion\":\"berlin\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":100},\"remappings\":[]},\"sources\":{\"@chainlink/contracts/src/v0.6/interfaces/AggregatorV3Interface.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity >=0.6.0;\\n\\ninterface AggregatorV3Interface {\\n\\n  function decimals() external view returns (uint8);\\n  function description() external view returns (string memory);\\n  function version() external view returns (uint256);\\n\\n  // getRoundData and latestRoundData should both raise \\\"No data present\\\"\\n  // if they do not have data to report, instead of returning unset values\\n  // which could be misinterpreted as actual reported values.\\n  function getRoundData(uint80 _roundId)\\n    external\\n    view\\n    returns (\\n      uint80 roundId,\\n      int256 answer,\\n      uint256 startedAt,\\n      uint256 updatedAt,\\n      uint80 answeredInRound\\n    );\\n  function latestRoundData()\\n    external\\n    view\\n    returns (\\n      uint80 roundId,\\n      int256 answer,\\n      uint256 startedAt,\\n      uint256 updatedAt,\\n      uint80 answeredInRound\\n    );\\n\\n}\\n\",\"keccak256\":\"0x1862840d741dedb36e774534b877a13b5187555e3b78b8d2815f898b0dc02268\",\"license\":\"MIT\"},\"@openzeppelin/contracts/math/SafeMath.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\npragma solidity ^0.7.0;\\n\\n/**\\n * @dev Wrappers over Solidity's arithmetic operations with added overflow\\n * checks.\\n *\\n * Arithmetic operations in Solidity wrap on overflow. This can easily result\\n * in bugs, because programmers usually assume that an overflow raises an\\n * error, which is the standard behavior in high level programming languages.\\n * `SafeMath` restores this intuition by reverting the transaction when an\\n * operation overflows.\\n *\\n * Using this library instead of the unchecked operations eliminates an entire\\n * class of bugs, so it's recommended to use it always.\\n */\\nlibrary SafeMath {\\n    /**\\n     * @dev Returns the addition of two unsigned integers, with an overflow flag.\\n     *\\n     * _Available since v3.4._\\n     */\\n    function tryAdd(uint256 a, uint256 b) internal pure returns (bool, uint256) {\\n        uint256 c = a + b;\\n        if (c < a) return (false, 0);\\n        return (true, c);\\n    }\\n\\n    /**\\n     * @dev Returns the substraction of two unsigned integers, with an overflow flag.\\n     *\\n     * _Available since v3.4._\\n     */\\n    function trySub(uint256 a, uint256 b) internal pure returns (bool, uint256) {\\n        if (b > a) return (false, 0);\\n        return (true, a - b);\\n    }\\n\\n    /**\\n     * @dev Returns the multiplication of two unsigned integers, with an overflow flag.\\n     *\\n     * _Available since v3.4._\\n     */\\n    function tryMul(uint256 a, uint256 b) internal pure returns (bool, uint256) {\\n        // Gas optimization: this is cheaper than requiring 'a' not being zero, but the\\n        // benefit is lost if 'b' is also tested.\\n        // See: https://github.com/OpenZeppelin/openzeppelin-contracts/pull/522\\n        if (a == 0) return (true, 0);\\n        uint256 c = a * b;\\n        if (c / a != b) return (false, 0);\\n        return (true, c);\\n    }\\n\\n    /**\\n     * @dev Returns the division of two unsigned integers, with a division by zero flag.\\n     *\\n     * _Available since v3.4._\\n     */\\n    function tryDiv(uint256 a, uint256 b) internal pure returns (bool, uint256) {\\n        if (b == 0) return (false, 0);\\n        return (true, a / b);\\n    }\\n\\n    /**\\n     * @dev Returns the remainder of dividing two unsigned integers, with a division by zero flag.\\n     *\\n     * _Available since v3.4._\\n     */\\n    function tryMod(uint256 a, uint256 b) internal pure returns (bool, uint256) {\\n        if (b == 0) return (false, 0);\\n        return (true, a % b);\\n    }\\n\\n    /**\\n     * @dev Returns the addition of two unsigned integers, reverting on\\n     * overflow.\\n     *\\n     * Counterpart to Solidity's `+` operator.\\n     *\\n     * Requirements:\\n     *\\n     * - Addition cannot overflow.\\n     */\\n    function add(uint256 a, uint256 b) internal pure returns (uint256) {\\n        uint256 c = a + b;\\n        require(c >= a, \\\"SafeMath: addition overflow\\\");\\n        return c;\\n    }\\n\\n    /**\\n     * @dev Returns the subtraction of two unsigned integers, reverting on\\n     * overflow (when the result is negative).\\n     *\\n     * Counterpart to Solidity's `-` operator.\\n     *\\n     * Requirements:\\n     *\\n     * - Subtraction cannot overflow.\\n     */\\n    function sub(uint256 a, uint256 b) internal pure returns (uint256) {\\n        require(b <= a, \\\"SafeMath: subtraction overflow\\\");\\n        return a - b;\\n    }\\n\\n    /**\\n     * @dev Returns the multiplication of two unsigned integers, reverting on\\n     * overflow.\\n     *\\n     * Counterpart to Solidity's `*` operator.\\n     *\\n     * Requirements:\\n     *\\n     * - Multiplication cannot overflow.\\n     */\\n    function mul(uint256 a, uint256 b) internal pure returns (uint256) {\\n        if (a == 0) return 0;\\n        uint256 c = a * b;\\n        require(c / a == b, \\\"SafeMath: multiplication overflow\\\");\\n        return c;\\n    }\\n\\n    /**\\n     * @dev Returns the integer division of two unsigned integers, reverting on\\n     * division by zero. The result is rounded towards zero.\\n     *\\n     * Counterpart to Solidity's `/` operator. Note: this function uses a\\n     * `revert` opcode (which leaves remaining gas untouched) while Solidity\\n     * uses an invalid opcode to revert (consuming all remaining gas).\\n     *\\n     * Requirements:\\n     *\\n     * - The divisor cannot be zero.\\n     */\\n    function div(uint256 a, uint256 b) internal pure returns (uint256) {\\n        require(b > 0, \\\"SafeMath: division by zero\\\");\\n        return a / b;\\n    }\\n\\n    /**\\n     * @dev Returns the remainder of dividing two unsigned integers. (unsigned integer modulo),\\n     * reverting when dividing by zero.\\n     *\\n     * Counterpart to Solidity's `%` operator. This function uses a `revert`\\n     * opcode (which leaves remaining gas untouched) while Solidity uses an\\n     * invalid opcode to revert (consuming all remaining gas).\\n     *\\n     * Requirements:\\n     *\\n     * - The divisor cannot be zero.\\n     */\\n    function mod(uint256 a, uint256 b) internal pure returns (uint256) {\\n        require(b > 0, \\\"SafeMath: modulo by zero\\\");\\n        return a % b;\\n    }\\n\\n    /**\\n     * @dev Returns the subtraction of two unsigned integers, reverting with custom message on\\n     * overflow (when the result is negative).\\n     *\\n     * CAUTION: This function is deprecated because it requires allocating memory for the error\\n     * message unnecessarily. For custom revert reasons use {trySub}.\\n     *\\n     * Counterpart to Solidity's `-` operator.\\n     *\\n     * Requirements:\\n     *\\n     * - Subtraction cannot overflow.\\n     */\\n    function sub(uint256 a, uint256 b, string memory errorMessage) internal pure returns (uint256) {\\n        require(b <= a, errorMessage);\\n        return a - b;\\n    }\\n\\n    /**\\n     * @dev Returns the integer division of two unsigned integers, reverting with custom message on\\n     * division by zero. The result is rounded towards zero.\\n     *\\n     * CAUTION: This function is deprecated because it requires allocating memory for the error\\n     * message unnecessarily. For custom revert reasons use {tryDiv}.\\n     *\\n     * Counterpart to Solidity's `/` operator. Note: this function uses a\\n     * `revert` opcode (which leaves remaining gas untouched) while Solidity\\n     * uses an invalid opcode to revert (consuming all remaining gas).\\n     *\\n     * Requirements:\\n     *\\n     * - The divisor cannot be zero.\\n     */\\n    function div(uint256 a, uint256 b, string memory errorMessage) internal pure returns (uint256) {\\n        require(b > 0, errorMessage);\\n        return a / b;\\n    }\\n\\n    /**\\n     * @dev Returns the remainder of dividing two unsigned integers. (unsigned integer modulo),\\n     * reverting with custom message when dividing by zero.\\n     *\\n     * CAUTION: This function is deprecated because it requires allocating memory for the error\\n     * message unnecessarily. For custom revert reasons use {tryMod}.\\n     *\\n     * Counterpart to Solidity's `%` operator. This function uses a `revert`\\n     * opcode (which leaves remaining gas untouched) while Solidity uses an\\n     * invalid opcode to revert (consuming all remaining gas).\\n     *\\n     * Requirements:\\n     *\\n     * - The divisor cannot be zero.\\n     */\\n    function mod(uint256 a, uint256 b, string memory errorMessage) internal pure returns (uint256) {\\n        require(b > 0, errorMessage);\\n        return a % b;\\n    }\\n}\\n\",\"keccak256\":\"0xe22a1fc7400ae196eba2ad1562d0386462b00a6363b742d55a2fd2021a58586f\",\"license\":\"MIT\"},\"@perp/perp-oracle-contract/contracts/ChainlinkPriceFeedV2.sol\":{\"content\":\"// SPDX-License-Identifier: GPL-3.0-or-later\\npragma solidity 0.7.6;\\n\\n// import { Address } from \\\"@openzeppelin/contracts/utils/Address.sol\\\";\\nimport { AggregatorV3Interface } from \\\"@chainlink/contracts/src/v0.6/interfaces/AggregatorV3Interface.sol\\\";\\nimport { IChainlinkPriceFeed } from \\\"./interface/IChainlinkPriceFeed.sol\\\";\\nimport { IPriceFeedV2 } from \\\"./interface/IPriceFeedV2.sol\\\";\\nimport { BlockContext } from \\\"./base/BlockContext.sol\\\";\\nimport { CachedTwap } from \\\"./twap/CachedTwap.sol\\\";\\n\\ncontract ChainlinkPriceFeedV2 is IChainlinkPriceFeed, IPriceFeedV2, BlockContext, CachedTwap {\\n    // using Address for address;\\n\\n    AggregatorV3Interface private immutable _aggregator;\\n\\n    constructor(AggregatorV3Interface aggregator, uint80 cacheTwapInterval) CachedTwap(cacheTwapInterval) {\\n        // CPF_ANC: Aggregator address is not contract\\n        // require(address(aggregator).isContract(), \\\"CPF_ANC\\\");\\n\\n        _aggregator = aggregator;\\n    }\\n\\n    /// @dev anyone can help update it.\\n    function update() external {\\n        (, uint256 latestPrice, uint256 latestTimestamp) = _getLatestRoundData();\\n        _update(latestPrice, latestTimestamp);\\n    }\\n\\n    function cacheTwap(uint256 interval) external override returns (uint256) {\\n        (uint80 round, uint256 latestPrice, uint256 latestTimestamp) = _getLatestRoundData();\\n\\n        if (interval == 0 || round == 0) {\\n            return latestPrice;\\n        }\\n        return _cacheTwap(interval, latestPrice, latestTimestamp);\\n    }\\n\\n    function decimals() external view override returns (uint8) {\\n        return _aggregator.decimals();\\n    }\\n\\n    function getAggregator() external view override returns (address) {\\n        return address(_aggregator);\\n    }\\n\\n    function getRoundData(uint80 roundId) external view override returns (uint256, uint256) {\\n        // NOTE: aggregator will revert if roundId is invalid (but there might not be a revert message sometimes)\\n        // will return (roundId, 0, 0, 0, roundId) if round is not complete (not existed yet)\\n        // https://docs.chain.link/docs/historical-price-data/\\n        (, int256 price, , uint256 updatedAt, ) = _aggregator.getRoundData(roundId);\\n\\n        // CPF_IP: Invalid Price\\n        require(price > 0, \\\"CPF_IP\\\");\\n\\n        // CPF_RINC: Round Is Not Complete\\n        require(updatedAt > 0, \\\"CPF_RINC\\\");\\n\\n        return (uint256(price), updatedAt);\\n    }\\n\\n    function getPrice(uint256 interval) external view override returns (uint256) {\\n        (uint80 round, uint256 latestPrice, uint256 latestTimestamp) = _getLatestRoundData();\\n\\n        if (interval == 0 || round == 0) {\\n            return latestPrice;\\n        }\\n\\n        return _getCachedTwap(interval, latestPrice, latestTimestamp);\\n    }\\n\\n    function _getLatestRoundData()\\n        private\\n        view\\n        returns (\\n            uint80,\\n            uint256 finalPrice,\\n            uint256\\n        )\\n    {\\n        (uint80 round, int256 latestPrice, , uint256 latestTimestamp, ) = _aggregator.latestRoundData();\\n        finalPrice = uint256(latestPrice);\\n        if (latestPrice < 0) {\\n            _requireEnoughHistory(round);\\n            (round, finalPrice, latestTimestamp) = _getRoundData(round - 1);\\n        }\\n        return (round, finalPrice, latestTimestamp);\\n    }\\n\\n    function _getRoundData(uint80 _round)\\n        private\\n        view\\n        returns (\\n            uint80,\\n            uint256,\\n            uint256\\n        )\\n    {\\n        (uint80 round, int256 latestPrice, , uint256 latestTimestamp, ) = _aggregator.getRoundData(_round);\\n        while (latestPrice < 0) {\\n            _requireEnoughHistory(round);\\n            round = round - 1;\\n            (, latestPrice, , latestTimestamp, ) = _aggregator.getRoundData(round);\\n        }\\n        return (round, uint256(latestPrice), latestTimestamp);\\n    }\\n\\n    function _requireEnoughHistory(uint80 _round) private pure {\\n        // CPF_NEH: no enough history\\n        require(_round > 0, \\\"CPF_NEH\\\");\\n    }\\n}\\n\",\"keccak256\":\"0x564f32918c0ce5a59e9d16c129cbd55fa1c4ef3caba3d581d4be2d731000f5cb\",\"license\":\"GPL-3.0-or-later\"},\"@perp/perp-oracle-contract/contracts/base/BlockContext.sol\":{\"content\":\"// SPDX-License-Identifier: GPL-3.0-or-later\\npragma solidity 0.7.6;\\n\\nabstract contract BlockContext {\\n    function _blockTimestamp() internal view virtual returns (uint256) {\\n        // Reply from Arbitrum\\n        // block.timestamp returns timestamp at the time at which the sequencer receives the tx.\\n        // It may not actually correspond to a particular L1 block\\n        return block.timestamp;\\n    }\\n\\n    function _blockNumber() internal view virtual returns (uint256) {\\n        return block.number;\\n    }\\n}\\n\",\"keccak256\":\"0x455054044e1f075154181baf8edd65afb60e47cfe6ad702297ba14975c8ba8a6\",\"license\":\"GPL-3.0-or-later\"},\"@perp/perp-oracle-contract/contracts/interface/IChainlinkPriceFeed.sol\":{\"content\":\"// SPDX-License-Identifier: GPL-3.0-or-later\\npragma solidity 0.7.6;\\n\\ninterface IChainlinkPriceFeed {\\n    function getAggregator() external view returns (address);\\n\\n    /// @param roundId The roundId that fed into Chainlink aggregator.\\n    function getRoundData(uint80 roundId) external view returns (uint256, uint256);\\n}\\n\",\"keccak256\":\"0x4a9d17f6ac65eed91b1807f64c110b4e8b23db0690da4dc9d3675949770cab5c\",\"license\":\"GPL-3.0-or-later\"},\"@perp/perp-oracle-contract/contracts/interface/IPriceFeed.sol\":{\"content\":\"// SPDX-License-Identifier: GPL-3.0-or-later\\npragma solidity 0.7.6;\\n\\ninterface IPriceFeed {\\n    function decimals() external view returns (uint8);\\n\\n    /// @dev Returns the index price of the token.\\n    /// @param interval The interval represents twap interval.\\n    function getPrice(uint256 interval) external view returns (uint256);\\n}\\n\",\"keccak256\":\"0x4417d0175e8165ea6f6559b3dfbe5ff309cef1c0d1e242e528610a191c9b7769\",\"license\":\"GPL-3.0-or-later\"},\"@perp/perp-oracle-contract/contracts/interface/IPriceFeedV2.sol\":{\"content\":\"// SPDX-License-Identifier: GPL-3.0-or-later\\npragma solidity 0.7.6;\\n\\nimport \\\"./IPriceFeed.sol\\\";\\n\\ninterface IPriceFeedV2 is IPriceFeed {\\n    /// @dev Returns the cached index price of the token.\\n    /// @param interval The interval represents twap interval.\\n    function cacheTwap(uint256 interval) external returns (uint256);\\n}\\n\",\"keccak256\":\"0xb4eafb5cfa9b6acfd623ec52dab6a7b3bcae4afce4e44d5c5cfdf28b15226d6c\",\"license\":\"GPL-3.0-or-later\"},\"@perp/perp-oracle-contract/contracts/twap/CachedTwap.sol\":{\"content\":\"// SPDX-License-Identifier: GPL-3.0-or-later\\npragma solidity 0.7.6;\\npragma experimental ABIEncoderV2;\\n\\nimport { CumulativeTwap } from \\\"./CumulativeTwap.sol\\\";\\n\\nabstract contract CachedTwap is CumulativeTwap {\\n    uint256 internal _cachedTwap;\\n    uint160 internal _lastUpdatedAt;\\n    uint80 internal _interval;\\n\\n    constructor(uint80 interval) {\\n        _interval = interval;\\n    }\\n\\n    function _cacheTwap(\\n        uint256 interval,\\n        uint256 latestPrice,\\n        uint256 latestUpdatedTimestamp\\n    ) internal virtual returns (uint256) {\\n        // if requested interval is not the same as the one we have cached, then call _getPrice() directly\\n        if (_interval != interval) {\\n            return _calculateTwapPrice(interval, latestPrice, latestUpdatedTimestamp);\\n        }\\n\\n        // if twap has been calculated in this block, then return cached value directly\\n        if (_blockTimestamp() == _lastUpdatedAt) {\\n            return _cachedTwap;\\n        }\\n\\n        _update(latestPrice, latestUpdatedTimestamp);\\n        _lastUpdatedAt = uint160(_blockTimestamp());\\n        _cachedTwap = _calculateTwapPrice(interval, latestPrice, latestUpdatedTimestamp);\\n\\n        return _cachedTwap;\\n    }\\n\\n    function _getCachedTwap(\\n        uint256 interval,\\n        uint256 latestPrice,\\n        uint256 latestUpdatedTimestamp\\n    ) internal view returns (uint256) {\\n        if (_blockTimestamp() == _lastUpdatedAt && interval == _interval) {\\n            return _cachedTwap;\\n        }\\n        return _calculateTwapPrice(interval, latestPrice, latestUpdatedTimestamp);\\n    }\\n}\\n\",\"keccak256\":\"0xb33d02b12352c22e7fb97765a5bf2ec69f9e15b8033e572d011c15a84022aa8f\",\"license\":\"GPL-3.0-or-later\"},\"@perp/perp-oracle-contract/contracts/twap/CumulativeTwap.sol\":{\"content\":\"// SPDX-License-Identifier: GPL-3.0-or-later\\npragma solidity 0.7.6;\\npragma experimental ABIEncoderV2;\\n\\nimport { BlockContext } from \\\"../base/BlockContext.sol\\\";\\nimport { SafeMath } from \\\"@openzeppelin/contracts/math/SafeMath.sol\\\";\\n\\ncontract CumulativeTwap is BlockContext {\\n    using SafeMath for uint256;\\n\\n    //\\n    // STRUCT\\n    //\\n    struct Observation {\\n        uint256 price;\\n        uint256 priceCumulative;\\n        uint256 timestamp;\\n    }\\n\\n    //\\n    // EVENT\\n    //\\n    event PriceUpdated(uint256 price, uint256 timestamp, uint8 indexAt);\\n\\n    //\\n    // STATE\\n    //\\n    // let's use 15 mins and 1 hr twap as example\\n    // if the price is being updated 15 secs, then needs 60 and 240 historical data for 15mins and 1hr twap.\\n    Observation[256] public observations;\\n\\n    uint8 public currentObservationIndex;\\n\\n    function _update(uint256 price, uint256 lastUpdatedTimestamp) internal {\\n        // for the first time update\\n        if (currentObservationIndex == 0 && observations[0].timestamp == 0) {\\n            observations[0] = Observation({ price: price, priceCumulative: 0, timestamp: lastUpdatedTimestamp });\\n            emit PriceUpdated(price, lastUpdatedTimestamp, 0);\\n            return;\\n        }\\n\\n        // CT_IT: invalid timestamp\\n        Observation memory lastObservation = observations[currentObservationIndex];\\n        require(lastUpdatedTimestamp > lastObservation.timestamp, \\\"CT_IT\\\");\\n\\n        // overflow of currentObservationIndex is desired since currentObservationIndex is uint8 (0 - 255),\\n        // so 255 + 1 will be 0\\n        currentObservationIndex++;\\n\\n        uint256 elapsedTime = lastUpdatedTimestamp - lastObservation.timestamp;\\n        observations[currentObservationIndex] = Observation({\\n            priceCumulative: lastObservation.priceCumulative + (lastObservation.price * elapsedTime),\\n            timestamp: lastUpdatedTimestamp,\\n            price: price\\n        });\\n\\n        emit PriceUpdated(price, lastUpdatedTimestamp, currentObservationIndex);\\n    }\\n\\n    function _calculateTwapPrice(\\n        uint256 interval,\\n        uint256 latestPrice,\\n        uint256 latestUpdatedTimestamp\\n    ) internal view returns (uint256) {\\n        Observation memory latestObservation = observations[currentObservationIndex];\\n        if (latestObservation.price == 0) {\\n            // CT_ND: no data\\n            revert(\\\"CT_ND\\\");\\n        }\\n\\n        uint256 currentTimestamp = _blockTimestamp();\\n        uint256 targetTimestamp = currentTimestamp.sub(interval);\\n        (Observation memory beforeOrAt, Observation memory atOrAfter) = _getSurroundingObservations(targetTimestamp);\\n        uint256 currentCumulativePrice =\\n            latestObservation.priceCumulative.add(\\n                (latestObservation.price.mul(latestUpdatedTimestamp.sub(latestObservation.timestamp))).add(\\n                    latestPrice.mul(currentTimestamp.sub(latestUpdatedTimestamp))\\n                )\\n            );\\n\\n        //\\n        //                   beforeOrAt                    atOrAfter\\n        //      ------------------+-------------+---------------+------------------\\n        //                <-------|             |               |\\n        // case 1       targetTimestamp         |               |------->\\n        // case 2                               |              targetTimestamp\\n        // case 3                          targetTimestamp\\n        //\\n        uint256 targetCumulativePrice;\\n        // case1. not enough historical data or just enough (`==` case)\\n        if (targetTimestamp <= beforeOrAt.timestamp) {\\n            targetTimestamp = beforeOrAt.timestamp;\\n            targetCumulativePrice = beforeOrAt.priceCumulative;\\n        }\\n        // case2. the latest data is older than or equal the request\\n        else if (atOrAfter.timestamp <= targetTimestamp) {\\n            targetTimestamp = atOrAfter.timestamp;\\n            targetCumulativePrice = atOrAfter.priceCumulative;\\n        }\\n        // case3. in the middle\\n        else {\\n            uint256 observationTimeDelta = atOrAfter.timestamp - beforeOrAt.timestamp;\\n            uint256 targetTimeDelta = targetTimestamp - beforeOrAt.timestamp;\\n            targetCumulativePrice = beforeOrAt.priceCumulative.add(\\n                ((atOrAfter.priceCumulative.sub(beforeOrAt.priceCumulative)).mul(targetTimeDelta)).div(\\n                    observationTimeDelta\\n                )\\n            );\\n        }\\n\\n        return currentCumulativePrice.sub(targetCumulativePrice).div(currentTimestamp - targetTimestamp);\\n    }\\n\\n    function _getSurroundingObservations(uint256 targetTimestamp)\\n        internal\\n        view\\n        returns (Observation memory beforeOrAt, Observation memory atOrAfter)\\n    {\\n        uint8 index = currentObservationIndex;\\n        uint8 beforeOrAtIndex;\\n        uint8 atOrAfterIndex;\\n\\n        // run at most 256 times\\n        uint256 observationLen = observations.length;\\n        uint256 i;\\n        for (i = 0; i < observationLen; i++) {\\n            if (observations[index].timestamp <= targetTimestamp) {\\n                // if the next observation is empty, using the last one\\n                // it implies the historical data is not enough\\n                if (observations[index].timestamp == 0) {\\n                    atOrAfterIndex = beforeOrAtIndex = index + 1;\\n                    break;\\n                }\\n                beforeOrAtIndex = index;\\n                atOrAfterIndex = beforeOrAtIndex + 1;\\n                break;\\n            }\\n            index--;\\n        }\\n\\n        // not enough historical data to query\\n        if (i == observationLen) {\\n            // CT_NEH: no enough historical data\\n            revert(\\\"CT_NEH\\\");\\n        }\\n\\n        beforeOrAt = observations[beforeOrAtIndex];\\n        atOrAfter = observations[atOrAfterIndex];\\n\\n        // if timestamp of the right bound is earlier than timestamp of the left bound,\\n        // it means the left bound is the lastest observation.\\n        // It implies the latest observation is older than requested\\n        // Then we set the right bound to the left bound.\\n        if (atOrAfter.timestamp < beforeOrAt.timestamp) {\\n            atOrAfter = beforeOrAt;\\n        }\\n    }\\n}\\n\",\"keccak256\":\"0x2bf1a6939e73e43a95221ab64a0f87704ed5edde0467783647a980e6b5cecb12\",\"license\":\"GPL-3.0-or-later\"}},\"version\":1}",
+  "bytecode": "0x60a060405234801561001057600080fd5b50604051610fc2380380610fc28339818101604052604081101561003357600080fd5b50805160209091015161030280546001600160501b03909216600160a01b02600160a01b600160f01b03199092169190911790556001600160601b0319606082901b166080526001600160a01b0316610f106100b260003980610212528061029c52806102c6528061046b528061083c52806109025250610f106000f3fe608060405234801561001057600080fd5b50600436106100785760003560e01c80631d1a111a1461007d578063252c09d7146100ac578063313ce567146100e75780633ad59dbc146101055780639a6fc8f514610129578063a2e6204514610168578063aed3aff714610172578063e75722301461017a575b600080fd5b61009a6004803603602081101561009357600080fd5b5035610197565b60408051918252519081900360200190f35b6100c9600480360360208110156100c257600080fd5b50356101e6565b60408051938452602084019290925282820152519081900360600190f35b6100ef61020e565b6040805160ff9092168252519081900360200190f35b61010d61029a565b604080516001600160a01b039092168252519081900360200190f35b61014f6004803603602081101561013f57600080fd5b50356001600160501b03166102be565b6040805192835260208301919091528051918290030190f35b6101706103f4565b005b6100ef610412565b61009a6004803603602081101561019057600080fd5b503561041c565b6000806000806101a5610460565b92509250925084600014806101c157506001600160501b038316155b156101d0575091506101e19050565b6101db858383610537565b93505050505b919050565b60008161010081106101f757600080fd5b600302018054600182015460029092015490925083565b60007f00000000000000000000000000000000000000000000000000000000000000006001600160a01b031663313ce5676040518163ffffffff1660e01b815260040160206040518083038186803b15801561026957600080fd5b505afa15801561027d573d6000803e3d6000fd5b505050506040513d602081101561029357600080fd5b5051905090565b7f000000000000000000000000000000000000000000000000000000000000000090565b6000806000807f00000000000000000000000000000000000000000000000000000000000000006001600160a01b0316639a6fc8f5866040518263ffffffff1660e01b815260040180826001600160501b0316815260200191505060a06040518083038186803b15801561033157600080fd5b505afa158015610345573d6000803e3d6000fd5b505050506040513d60a081101561035b57600080fd5b5060208101516060909101519092509050600082136103aa576040805162461bcd60e51b815260206004820152600660248201526504350465f49560d41b604482015290519081900360640190fd5b600081116103ea576040805162461bcd60e51b81526020600482015260086024820152674350465f52494e4360c01b604482015290519081900360640190fd5b9092509050915091565b6000806103ff610460565b925092505061040e82826105d9565b5050565b6103005460ff1681565b60008060008061042a610460565b925092509250846000148061044657506001600160501b038316155b15610455575091506101e19050565b6101db85838361078d565b6000806000806000807f00000000000000000000000000000000000000000000000000000000000000006001600160a01b031663feaf968c6040518163ffffffff1660e01b815260040160a06040518083038186803b1580156104c257600080fd5b505afa1580156104d6573d6000803e3d6000fd5b505050506040513d60a08110156104ec57600080fd5b508051602082015160609092015191965093508592509050600082121561052b57610516836107e6565b61052260018403610831565b90965090935090505b91945090915050909192565b61030254600090600160a01b90046001600160501b031684146105665761055f8484846109ba565b90506105d2565b610302546001600160a01b031661057b610b51565b141561058b5750610301546105d2565b61059583836105d9565b61059d610b51565b61030280546001600160a01b0319166001600160a01b03929092169190911790556105c98484846109ba565b61030181905590505b9392505050565b6103005460ff161580156105ed5750600254155b1561065957604080516060810182528381526000602082018190529082018390528381556001819055600283905590517f5f4a9a1b73bee700ca1fb203bb004bcc0a7eca48af3f147b24dcf5bf4bf3c00b9161064c9185918591610ea0565b60405180910390a161040e565b61030054600090819060ff16610100811061067057fe5b6040805160608101825260039290920292909201805482526001810154602083015260020154918101829052915082116106c55760405162461bcd60e51b81526004016106bc90610e62565b60405180910390fd5b610300805460ff198116600160ff9283160182161791829055604083810151815160608101835287815285516020808801519389039182029093019282019290925291820186905292909160009116610100811061071f57fe5b825160039190910291909101908155602082015160018201556040918201516002909101556103005490517f5f4a9a1b73bee700ca1fb203bb004bcc0a7eca48af3f147b24dcf5bf4bf3c00b9161077f918791879160ff90911690610ea0565b60405180910390a150505050565b610302546000906001600160a01b03166107a5610b51565b1480156107c4575061030254600160a01b90046001600160501b031684145b156107d35750610301546105d2565b6107de8484846109ba565b949350505050565b6000816001600160501b03161161082e576040805162461bcd60e51b8152602060048201526007602482015266086a08cbe9c8a960cb1b604482015290519081900360640190fd5b50565b6000806000806000807f00000000000000000000000000000000000000000000000000000000000000006001600160a01b0316639a6fc8f5886040518263ffffffff1660e01b815260040180826001600160501b0316815260200191505060a06040518083038186803b1580156108a757600080fd5b505afa1580156108bb573d6000803e3d6000fd5b505050506040513d60a08110156108d157600080fd5b508051602082015160609092015190945090925090505b60008212156109ad576108fa836107e6565b6001830392507f00000000000000000000000000000000000000000000000000000000000000006001600160a01b0316639a6fc8f5846040518263ffffffff1660e01b815260040180826001600160501b0316815260200191505060a06040518083038186803b15801561096d57600080fd5b505afa158015610981573d6000803e3d6000fd5b505050506040513d60a081101561099757600080fd5b50602081015160609091015190925090506108e8565b9196909550909350915050565b610300546000908190819060ff1661010081106109d357fe5b6003020160405180606001604052908160008201548152602001600182015481526020016002820154815250509050806000015160001415610a275760405162461bcd60e51b81526004016106bc90610e81565b6000610a31610b51565b90506000610a3f8288610b55565b9050600080610a4d83610bb7565b90925090506000610aa1610a96610a6e610a67888c610b55565b8c90610d07565b610a90610a888a604001518d610b5590919063ffffffff16565b8a5190610d07565b90610d60565b602088015190610d60565b9050600083604001518511610ac3578360400151945083602001519050610b32565b84836040015111610ae1578260400151945082602001519050610b32565b6000846040015184604001510390506000856040015187039050610b2d610a9683610b2784610b218b602001518b60200151610b5590919063ffffffff16565b90610d07565b90610dba565b925050505b610b42858703610b278484610b55565b9b9a5050505050505050505050565b4290565b600082821115610bac576040805162461bcd60e51b815260206004820152601e60248201527f536166654d6174683a207375627472616374696f6e206f766572666c6f770000604482015290519081900360640190fd5b508082035b92915050565b610bbf610e21565b610bc7610e21565b6103005460ff16600080610100815b81811015610c49578760008660ff166101008110610bf057fe5b600302016002015411610c3a5760008560ff166101008110610c0e57fe5b600302016002015460001415610c2c57846001019350839250610c49565b849350836001019250610c49565b60001990940193600101610bd6565b81811415610c695760405162461bcd60e51b81526004016106bc90610e42565b60008460ff166101008110610c7a57fe5b600302016040518060600160405290816000820154815260200160018201548152602001600282015481525050965060008360ff166101008110610cba57fe5b6003020160405180606001604052908160008201548152602001600182015481526020016002820154815250509550866040015186604001511015610cfd578695505b5050505050915091565b600082610d1657506000610bb1565b82820282848281610d2357fe5b04146105d25760405162461bcd60e51b8152600401808060200182810382526021815260200180610eba6021913960400191505060405180910390fd5b6000828201838110156105d2576040805162461bcd60e51b815260206004820152601b60248201527f536166654d6174683a206164646974696f6e206f766572666c6f770000000000604482015290519081900360640190fd5b6000808211610e10576040805162461bcd60e51b815260206004820152601a60248201527f536166654d6174683a206469766973696f6e206279207a65726f000000000000604482015290519081900360640190fd5b818381610e1957fe5b049392505050565b60405180606001604052806000815260200160008152602001600081525090565b602080825260069082015265086a8be9c8a960d31b604082015260600190565b60208082526005908201526410d517d25560da1b604082015260600190565b60208082526005908201526410d517d39160da1b604082015260600190565b928352602083019190915260ff1660408201526060019056fe536166654d6174683a206d756c7469706c69636174696f6e206f766572666c6f77a2646970667358221220bb09b1070adba25be827173171831d67eca487ca3f8ad8d489772060f3a08b2e64736f6c63430007060033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100785760003560e01c80631d1a111a1461007d578063252c09d7146100ac578063313ce567146100e75780633ad59dbc146101055780639a6fc8f514610129578063a2e6204514610168578063aed3aff714610172578063e75722301461017a575b600080fd5b61009a6004803603602081101561009357600080fd5b5035610197565b60408051918252519081900360200190f35b6100c9600480360360208110156100c257600080fd5b50356101e6565b60408051938452602084019290925282820152519081900360600190f35b6100ef61020e565b6040805160ff9092168252519081900360200190f35b61010d61029a565b604080516001600160a01b039092168252519081900360200190f35b61014f6004803603602081101561013f57600080fd5b50356001600160501b03166102be565b6040805192835260208301919091528051918290030190f35b6101706103f4565b005b6100ef610412565b61009a6004803603602081101561019057600080fd5b503561041c565b6000806000806101a5610460565b92509250925084600014806101c157506001600160501b038316155b156101d0575091506101e19050565b6101db858383610537565b93505050505b919050565b60008161010081106101f757600080fd5b600302018054600182015460029092015490925083565b60007f00000000000000000000000000000000000000000000000000000000000000006001600160a01b031663313ce5676040518163ffffffff1660e01b815260040160206040518083038186803b15801561026957600080fd5b505afa15801561027d573d6000803e3d6000fd5b505050506040513d602081101561029357600080fd5b5051905090565b7f000000000000000000000000000000000000000000000000000000000000000090565b6000806000807f00000000000000000000000000000000000000000000000000000000000000006001600160a01b0316639a6fc8f5866040518263ffffffff1660e01b815260040180826001600160501b0316815260200191505060a06040518083038186803b15801561033157600080fd5b505afa158015610345573d6000803e3d6000fd5b505050506040513d60a081101561035b57600080fd5b5060208101516060909101519092509050600082136103aa576040805162461bcd60e51b815260206004820152600660248201526504350465f49560d41b604482015290519081900360640190fd5b600081116103ea576040805162461bcd60e51b81526020600482015260086024820152674350465f52494e4360c01b604482015290519081900360640190fd5b9092509050915091565b6000806103ff610460565b925092505061040e82826105d9565b5050565b6103005460ff1681565b60008060008061042a610460565b925092509250846000148061044657506001600160501b038316155b15610455575091506101e19050565b6101db85838361078d565b6000806000806000807f00000000000000000000000000000000000000000000000000000000000000006001600160a01b031663feaf968c6040518163ffffffff1660e01b815260040160a06040518083038186803b1580156104c257600080fd5b505afa1580156104d6573d6000803e3d6000fd5b505050506040513d60a08110156104ec57600080fd5b508051602082015160609092015191965093508592509050600082121561052b57610516836107e6565b61052260018403610831565b90965090935090505b91945090915050909192565b61030254600090600160a01b90046001600160501b031684146105665761055f8484846109ba565b90506105d2565b610302546001600160a01b031661057b610b51565b141561058b5750610301546105d2565b61059583836105d9565b61059d610b51565b61030280546001600160a01b0319166001600160a01b03929092169190911790556105c98484846109ba565b61030181905590505b9392505050565b6103005460ff161580156105ed5750600254155b1561065957604080516060810182528381526000602082018190529082018390528381556001819055600283905590517f5f4a9a1b73bee700ca1fb203bb004bcc0a7eca48af3f147b24dcf5bf4bf3c00b9161064c9185918591610ea0565b60405180910390a161040e565b61030054600090819060ff16610100811061067057fe5b6040805160608101825260039290920292909201805482526001810154602083015260020154918101829052915082116106c55760405162461bcd60e51b81526004016106bc90610e62565b60405180910390fd5b610300805460ff198116600160ff9283160182161791829055604083810151815160608101835287815285516020808801519389039182029093019282019290925291820186905292909160009116610100811061071f57fe5b825160039190910291909101908155602082015160018201556040918201516002909101556103005490517f5f4a9a1b73bee700ca1fb203bb004bcc0a7eca48af3f147b24dcf5bf4bf3c00b9161077f918791879160ff90911690610ea0565b60405180910390a150505050565b610302546000906001600160a01b03166107a5610b51565b1480156107c4575061030254600160a01b90046001600160501b031684145b156107d35750610301546105d2565b6107de8484846109ba565b949350505050565b6000816001600160501b03161161082e576040805162461bcd60e51b8152602060048201526007602482015266086a08cbe9c8a960cb1b604482015290519081900360640190fd5b50565b6000806000806000807f00000000000000000000000000000000000000000000000000000000000000006001600160a01b0316639a6fc8f5886040518263ffffffff1660e01b815260040180826001600160501b0316815260200191505060a06040518083038186803b1580156108a757600080fd5b505afa1580156108bb573d6000803e3d6000fd5b505050506040513d60a08110156108d157600080fd5b508051602082015160609092015190945090925090505b60008212156109ad576108fa836107e6565b6001830392507f00000000000000000000000000000000000000000000000000000000000000006001600160a01b0316639a6fc8f5846040518263ffffffff1660e01b815260040180826001600160501b0316815260200191505060a06040518083038186803b15801561096d57600080fd5b505afa158015610981573d6000803e3d6000fd5b505050506040513d60a081101561099757600080fd5b50602081015160609091015190925090506108e8565b9196909550909350915050565b610300546000908190819060ff1661010081106109d357fe5b6003020160405180606001604052908160008201548152602001600182015481526020016002820154815250509050806000015160001415610a275760405162461bcd60e51b81526004016106bc90610e81565b6000610a31610b51565b90506000610a3f8288610b55565b9050600080610a4d83610bb7565b90925090506000610aa1610a96610a6e610a67888c610b55565b8c90610d07565b610a90610a888a604001518d610b5590919063ffffffff16565b8a5190610d07565b90610d60565b602088015190610d60565b9050600083604001518511610ac3578360400151945083602001519050610b32565b84836040015111610ae1578260400151945082602001519050610b32565b6000846040015184604001510390506000856040015187039050610b2d610a9683610b2784610b218b602001518b60200151610b5590919063ffffffff16565b90610d07565b90610dba565b925050505b610b42858703610b278484610b55565b9b9a5050505050505050505050565b4290565b600082821115610bac576040805162461bcd60e51b815260206004820152601e60248201527f536166654d6174683a207375627472616374696f6e206f766572666c6f770000604482015290519081900360640190fd5b508082035b92915050565b610bbf610e21565b610bc7610e21565b6103005460ff16600080610100815b81811015610c49578760008660ff166101008110610bf057fe5b600302016002015411610c3a5760008560ff166101008110610c0e57fe5b600302016002015460001415610c2c57846001019350839250610c49565b849350836001019250610c49565b60001990940193600101610bd6565b81811415610c695760405162461bcd60e51b81526004016106bc90610e42565b60008460ff166101008110610c7a57fe5b600302016040518060600160405290816000820154815260200160018201548152602001600282015481525050965060008360ff166101008110610cba57fe5b6003020160405180606001604052908160008201548152602001600182015481526020016002820154815250509550866040015186604001511015610cfd578695505b5050505050915091565b600082610d1657506000610bb1565b82820282848281610d2357fe5b04146105d25760405162461bcd60e51b8152600401808060200182810382526021815260200180610eba6021913960400191505060405180910390fd5b6000828201838110156105d2576040805162461bcd60e51b815260206004820152601b60248201527f536166654d6174683a206164646974696f6e206f766572666c6f770000000000604482015290519081900360640190fd5b6000808211610e10576040805162461bcd60e51b815260206004820152601a60248201527f536166654d6174683a206469766973696f6e206279207a65726f000000000000604482015290519081900360640190fd5b818381610e1957fe5b049392505050565b60405180606001604052806000815260200160008152602001600081525090565b602080825260069082015265086a8be9c8a960d31b604082015260600190565b60208082526005908201526410d517d25560da1b604082015260600190565b60208082526005908201526410d517d39160da1b604082015260600190565b928352602083019190915260ff1660408201526060019056fe536166654d6174683a206d756c7469706c69636174696f6e206f766572666c6f77a2646970667358221220bb09b1070adba25be827173171831d67eca487ca3f8ad8d489772060f3a08b2e64736f6c63430007060033",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {
+      "cacheTwap(uint256)": {
+        "details": "Returns the cached index price of the token.",
+        "params": {
+          "interval": "The interval represents twap interval."
+        }
+      },
+      "getPrice(uint256)": {
+        "details": "Returns the index price of the token.",
+        "params": {
+          "interval": "The interval represents twap interval."
+        }
+      },
+      "getRoundData(uint80)": {
+        "params": {
+          "roundId": "The roundId that fed into Chainlink aggregator."
+        }
+      },
+      "update()": {
+        "details": "anyone can help update it."
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 4833,
+        "contract": "@perp/perp-oracle-contract/contracts/ChainlinkPriceFeedV2.sol:ChainlinkPriceFeedV2",
+        "label": "observations",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_array(t_struct(Observation)4821_storage)256_storage"
+      },
+      {
+        "astId": 4835,
+        "contract": "@perp/perp-oracle-contract/contracts/ChainlinkPriceFeedV2.sol:ChainlinkPriceFeedV2",
+        "label": "currentObservationIndex",
+        "offset": 0,
+        "slot": "768",
+        "type": "t_uint8"
+      },
+      {
+        "astId": 4703,
+        "contract": "@perp/perp-oracle-contract/contracts/ChainlinkPriceFeedV2.sol:ChainlinkPriceFeedV2",
+        "label": "_cachedTwap",
+        "offset": 0,
+        "slot": "769",
+        "type": "t_uint256"
+      },
+      {
+        "astId": 4705,
+        "contract": "@perp/perp-oracle-contract/contracts/ChainlinkPriceFeedV2.sol:ChainlinkPriceFeedV2",
+        "label": "_lastUpdatedAt",
+        "offset": 0,
+        "slot": "770",
+        "type": "t_uint160"
+      },
+      {
+        "astId": 4707,
+        "contract": "@perp/perp-oracle-contract/contracts/ChainlinkPriceFeedV2.sol:ChainlinkPriceFeedV2",
+        "label": "_interval",
+        "offset": 20,
+        "slot": "770",
+        "type": "t_uint80"
+      }
+    ],
+    "types": {
+      "t_array(t_struct(Observation)4821_storage)256_storage": {
+        "base": "t_struct(Observation)4821_storage",
+        "encoding": "inplace",
+        "label": "struct CumulativeTwap.Observation[256]",
+        "numberOfBytes": "24576"
+      },
+      "t_struct(Observation)4821_storage": {
+        "encoding": "inplace",
+        "label": "struct CumulativeTwap.Observation",
+        "members": [
+          {
+            "astId": 4816,
+            "contract": "@perp/perp-oracle-contract/contracts/ChainlinkPriceFeedV2.sol:ChainlinkPriceFeedV2",
+            "label": "price",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint256"
+          },
+          {
+            "astId": 4818,
+            "contract": "@perp/perp-oracle-contract/contracts/ChainlinkPriceFeedV2.sol:ChainlinkPriceFeedV2",
+            "label": "priceCumulative",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_uint256"
+          },
+          {
+            "astId": 4820,
+            "contract": "@perp/perp-oracle-contract/contracts/ChainlinkPriceFeedV2.sol:ChainlinkPriceFeedV2",
+            "label": "timestamp",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_uint256"
+          }
+        ],
+        "numberOfBytes": "96"
+      },
+      "t_uint160": {
+        "encoding": "inplace",
+        "label": "uint160",
+        "numberOfBytes": "20"
+      },
+      "t_uint256": {
+        "encoding": "inplace",
+        "label": "uint256",
+        "numberOfBytes": "32"
+      },
+      "t_uint8": {
+        "encoding": "inplace",
+        "label": "uint8",
+        "numberOfBytes": "1"
+      },
+      "t_uint80": {
+        "encoding": "inplace",
+        "label": "uint80",
+        "numberOfBytes": "10"
+      }
+    }
+  }
+}

@@ -2,12 +2,19 @@ import "@nomiclabs/hardhat-ethers"
 import "@nomiclabs/hardhat-waffle"
 import "@openzeppelin/hardhat-upgrades"
 import "@typechain/hardhat"
+import dotenv from "dotenv"
 import "hardhat-contract-sizer"
 import "hardhat-dependency-compiler"
+import "hardhat-deploy"
 import "hardhat-gas-reporter"
 import { HardhatUserConfig } from "hardhat/config"
 import "solidity-coverage"
 import "./mocha-test"
+
+dotenv.config()
+
+const GOERLI_KEY = process.env.GOERLI_KEY || "sample-goerli-key"
+const PRIVATE_KEY = process.env.PRIVATE_KEY || "sample-private-key"
 
 const config: HardhatUserConfig = {
     solidity: {
@@ -23,9 +30,16 @@ const config: HardhatUserConfig = {
             },
         },
     },
+    namedAccounts: {
+        deployer: 0,
+    },
     networks: {
         hardhat: {
             allowUnlimitedContractSize: true,
+        },
+        goerli: {
+            url: `https://eth-goerli.g.alchemy.com/v2/${GOERLI_KEY}`,
+            accounts: [PRIVATE_KEY],
         },
     },
     dependencyCompiler: {
@@ -33,7 +47,7 @@ const config: HardhatUserConfig = {
         paths: [
             "@uniswap/v3-core/contracts/UniswapV3Factory.sol",
             "@uniswap/v3-core/contracts/UniswapV3Pool.sol",
-            "@perp/perp-oracle-contract/contracts/ChainlinkPriceFeedV2.sol",
+            // "@perp/perp-oracle-contract/contracts/ChainlinkPriceFeedV2.sol",
             "@perp/perp-oracle-contract/contracts/BandPriceFeed.sol",
             "@perp/perp-oracle-contract/contracts/EmergencyPriceFeed.sol",
         ],
