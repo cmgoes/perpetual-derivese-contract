@@ -8,7 +8,7 @@ import { IPriceFeedV2 } from "@perp/perp-oracle-contract/contracts/interface/IPr
 import { BlockContext } from "@perp/perp-oracle-contract/contracts/base/BlockContext.sol";
 import { CachedTwap } from "@perp/perp-oracle-contract/contracts/twap/CachedTwap.sol";
 
-contract ChainlinkPriceFeedV2X is IChainlinkPriceFeed, IPriceFeedV2, BlockContext, CachedTwap {
+contract ChainlinkPriceFeedV2 is IChainlinkPriceFeed, IPriceFeedV2, BlockContext, CachedTwap {
     // using Address for address;
 
     AggregatorV3Interface private immutable _aggregator;

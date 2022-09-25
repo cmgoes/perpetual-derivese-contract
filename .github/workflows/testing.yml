@@ -2,6 +2,10 @@ name: Testing
 
 on: [push]
 
+env:
+  GOERLI_KEY: ${{ secrets.GOERLI_KEY }}
+  PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+
 jobs:
     contract-test:
         runs-on: ubuntu-latest
@@ -34,7 +38,7 @@ jobs:
               uses: actions/setup-node@v1
               with:
                   node-version: 16.x
-
+            
             - name: Install contract package dependencies
               run: npm ci
 
