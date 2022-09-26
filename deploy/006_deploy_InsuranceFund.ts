@@ -8,14 +8,14 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
     const { deployer } = await getNamedAccounts()
 
     await catchUnknownSigner(
-        deploy("ClearingHouseConfig", {
+        deploy("InsuranceFund", {
             from: deployer,
             proxy: {
                 proxyContract: "OpenZeppelinTransparentProxy",
                 execute: {
                     init: {
                         methodName: "initialize",
-                        args: [],
+                        args: ["0x07865c6e87b9f70255377e024ace6630c1eaa37f"],
                     },
                 },
             },
@@ -24,4 +24,4 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
     )
 }
 export default func
-func.tags = ["ClearingHouseConfig"]
+func.tags = ["InsuranceFund"]

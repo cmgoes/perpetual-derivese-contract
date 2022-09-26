@@ -7,15 +7,21 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
 
     const { deployer } = await getNamedAccounts()
 
-    const cacheTwapInterval = 15 * 60
-
     await catchUnknownSigner(
-        deploy("ChainlinkPriceFeedV2", {
+        deploy("DelegateApproval", {
             from: deployer,
-            args: ["0x779877A7B0D9E8603169DdbD7836e478b4624789", cacheTwapInterval],
+            proxy: {
+                proxyContract: "OpenZeppelinTransparentProxy",
+                execute: {
+                    init: {
+                        methodName: "initialize",
+                        args: [],
+                    },
+                },
+            },
             log: true,
         }),
     )
 }
 export default func
-func.tags = ["ChainlinkPriceFeedV2"]
+func.tags = ["DelegateApproval"]
