@@ -6,7 +6,7 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
     const { deploy, catchUnknownSigner, get } = deployments
 
     const { deployer } = await getNamedAccounts()
-    const chainlinkPriceFeedV2X = await get("ChainlinkPriceFeedV2X")
+    const chainlinkPriceFeedV2 = await get("ChainlinkPriceFeedV2")
 
     await catchUnknownSigner(
         deploy("BaseToken", {
@@ -16,7 +16,7 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
                 execute: {
                     init: {
                         methodName: "initialize",
-                        args: ["RandomTestToken0", "RandomTestToken0", chainlinkPriceFeedV2X.address],
+                        args: ["RandomTestToken0", "RandomTestToken0", chainlinkPriceFeedV2.address],
                     },
                 },
             },

@@ -10,7 +10,7 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
     const cacheTwapInterval = 15 * 60
 
     await catchUnknownSigner(
-        deploy("ChainlinkPriceFeedV2X", {
+        deploy("ChainlinkPriceFeedV2", {
             from: deployer,
             args: ["0x779877A7B0D9E8603169DdbD7836e478b4624789", cacheTwapInterval],
             log: true,
@@ -18,4 +18,4 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
     )
 }
 export default func
-func.tags = ["ChainlinkPriceFeedV2X"]
+func.tags = ["ChainlinkPriceFeedV2"]
