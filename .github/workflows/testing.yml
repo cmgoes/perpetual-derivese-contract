@@ -3,8 +3,8 @@ name: Testing
 on: [push]
 
 env:
-  GOERLI_KEY: ${{ secrets.GOERLI_KEY }}
-  PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+    GOERLI_KEY: ${{ secrets.GOERLI_KEY }}
+    PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
 
 jobs:
     contract-test:

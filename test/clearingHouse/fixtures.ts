@@ -4,7 +4,6 @@ import { ethers } from "hardhat"
 import {
     AccountBalance,
     BaseToken,
-    ChainlinkPriceFeedV2,
     ClearingHouse,
     ClearingHouseConfig,
     CollateralManager,
@@ -22,6 +21,7 @@ import {
     UniswapV3Pool,
     Vault,
 } from "../../typechain"
+import { ChainlinkPriceFeedV2 } from "../../typechain/perp-oracle"
 import { QuoteToken } from "../../typechain/QuoteToken"
 import { TestAccountBalance } from "../../typechain/TestAccountBalance"
 import { createQuoteTokenFixture, token0Fixture, tokensFixture, uniswapV3FactoryFixture } from "../shared/fixtures"

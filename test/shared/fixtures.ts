@@ -1,14 +1,7 @@
 import { MockContract, smockit } from "@eth-optimism/smock"
 import { ethers } from "hardhat"
-import {
-    BaseToken,
-    ChainlinkPriceFeedV2,
-    EmergencyPriceFeed,
-    QuoteToken,
-    UniswapV3Factory,
-    UniswapV3Pool,
-    VirtualToken,
-} from "../../typechain"
+import { BaseToken, QuoteToken, UniswapV3Factory, UniswapV3Pool, VirtualToken } from "../../typechain"
+import { ChainlinkPriceFeedV2, EmergencyPriceFeed } from "../../typechain/perp-oracle"
 import { isAscendingTokenOrder } from "./utilities"
 
 interface TokensFixture {

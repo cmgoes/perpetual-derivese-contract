@@ -2,14 +2,8 @@ import { MockContract, smockit } from "@eth-optimism/smock"
 import { expect } from "chai"
 import { parseEther, parseUnits } from "ethers/lib/utils"
 import { ethers, waffle } from "hardhat"
-import {
-    ChainlinkPriceFeedV2,
-    CollateralManager,
-    InsuranceFund,
-    TestERC20,
-    TestVault,
-    UniswapV3Pool,
-} from "../../typechain"
+import { CollateralManager, InsuranceFund, TestERC20, TestVault, UniswapV3Pool } from "../../typechain"
+import { ChainlinkPriceFeedV2 } from "../../typechain/perp-oracle"
 import { ClearingHouseFixture, createClearingHouseFixture } from "../clearingHouse/fixtures"
 import {
     addOrder,
