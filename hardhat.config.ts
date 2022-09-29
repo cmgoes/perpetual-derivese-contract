@@ -15,6 +15,7 @@ dotenv.config()
 
 const GOERLI_KEY = process.env.GOERLI_KEY || "sample-goerli-key"
 const PRIVATE_KEY = process.env.PRIVATE_KEY || "sample-private-key"
+const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY || "sample-etherscan-api-key"
 
 const config: HardhatUserConfig = {
     solidity: {
@@ -40,6 +41,11 @@ const config: HardhatUserConfig = {
         goerli: {
             url: `https://eth-goerli.g.alchemy.com/v2/${GOERLI_KEY}`,
             accounts: [PRIVATE_KEY],
+            verify: {
+                etherscan: {
+                    apiKey: ETHERSCAN_API_KEY,
+                },
+            },
         },
     },
     dependencyCompiler: {
