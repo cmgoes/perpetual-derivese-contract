@@ -22,7 +22,7 @@ describe("ClearingHouse accounting (liquidity)", () => {
     let collateralDecimals: number
     let fixture: ClearingHouseFixture
 
-    const [m1r1LowerTick, m1r1UpperTick] = [43980, 48000] // maker1 liquidity range1
+    const [m1r1LowerTick, m1r1UpperTick] = [43980, 48500] // maker1 liquidity range1
     const [m1r2LowerTick, m1r2UpperTick] = [40000, 50000] // maker1 liquidity range2
     // maker2 liquidity range1 (deliberately the same as maker1 range1)
     const [m2r1LowerTick, m2r1UpperTick] = [m1r1LowerTick, m1r1UpperTick]

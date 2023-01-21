@@ -76,7 +76,7 @@ describe("AccountBalance", () => {
 
     describe("getBaseTokens()", () => {
         beforeEach(async () => {
-            const initPrice = "151.373306858723226652"
+            const initPrice = "151.373306858723222"
             await initMarket(fixture, initPrice)
             mockedBaseAggregator.smocked.latestRoundData.will.return.with(async () => {
                 return [0, parseUnits("151", 6), 0, 0, 0]

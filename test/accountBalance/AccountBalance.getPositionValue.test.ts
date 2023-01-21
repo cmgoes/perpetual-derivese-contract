@@ -79,9 +79,9 @@ describe("AccountBalance.getTotalPositionValue", () => {
             await clearingHouse.connect(alice).addLiquidity({
                 baseToken: baseToken.address,
                 base: parseEther("0"),
-                quote: parseEther("122.414646"),
-                lowerTick: 50000,
-                upperTick: 50200,
+                quote: parseEther("122.4146"),
+                lowerTick: 60000,
+                upperTick: 60200,
                 minBase: 0,
                 minQuote: 0,
                 useTakerBalance: false,
@@ -94,7 +94,7 @@ describe("AccountBalance.getTotalPositionValue", () => {
                 isBaseToQuote: true,
                 isExactInput: true,
                 oppositeAmountBound: 0,
-                amount: parseEther("0.4084104205"),
+                amount: parseEther("0.40841045"),
                 sqrtPriceLimitX96: 0,
                 deadline: ethers.constants.MaxUint256,
                 referralCode: ethers.constants.HashZero,
@@ -122,23 +122,23 @@ describe("AccountBalance.getTotalPositionValue", () => {
             // 2. when considering the accumulator, we also need floor(): (50099 * 900 / 900) = 50099 -> floor() -> 50099
             // -> 1.0001 ^ 50099 = 149.8522069974
             mockedBaseAggregator.smocked.latestRoundData.will.return.with(async () => {
-                return [0, parseUnits("149.852206", 6), 0, 0, 0]
+                return [0, parseUnits("149.85206", 6), 0, 0, 0]
             })
 
             expect(await accountBalance.getTotalPositionSize(alice.address, baseToken.address)).eq(
-                parseEther("0.408410420499999999"),
+                parseEther("0.4084104204999999"),
             )
             // 149.852206 * 0.408410420499999999 = 61.2012024653
             expect(await accountBalance.getTotalPositionValue(alice.address, baseToken.address)).eq(
-                parseEther("61.201202465312622850"),
+                parseEther("61.201202465622850"),
             )
 
             expect(await accountBalance.getTotalPositionSize(bob.address, baseToken.address)).eq(
-                parseEther("-0.4084104205"),
+                parseEther("-0.40841005"),
             )
             // 149.852206 * -0.4084104205 = -61.2012024653
             expect(await accountBalance.getTotalPositionValue(bob.address, baseToken.address)).eq(
-                parseEther("-61.201202465312623000"),
+                parseEther("-61.201202465323000"),
             )
         })
 
